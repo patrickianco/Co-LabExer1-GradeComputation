@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,8 +14,13 @@
         android:layout_height="wrap_content"
         android:text="Quiz 1"
         android:textSize="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="40dp"/>
+        app:layout_constraintRight_toLeftOf="@+id/quiz1"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/quiz1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.496" />
 
     <EditText
         android:id="@+id/quiz1"
@@ -24,10 +29,12 @@
         android:hint="Enter Quiz 1"
         android:ems="10"
         android:inputType="number"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="100dp"
         android:layout_alignBaseline="@id/textView"
-        android:layout_toRightOf="@id/textView"/>
+        android:layout_toRightOf="@id/textView"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
     <TextView
@@ -37,8 +44,13 @@
         android:text="Quiz 2"
         android:textSize="20dp"
         android:layout_below="@id/textView"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/quiz2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quiz2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.493" />
 
     <EditText
         android:id="@+id/quiz2"
@@ -49,8 +61,11 @@
         android:inputType="number"
         android:layout_below="@id/quiz1"
         android:layout_toRightOf="@id/textView2"
-        android:layout_marginLeft="100dp"
-        android:layout_alignBaseline="@id/textView2"/>
+        android:layout_alignBaseline="@id/textView2"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/quiz1"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <TextView
@@ -60,8 +75,13 @@
         android:text="Seatworks"
         android:textSize="20dp"
         android:layout_below="@id/textView2"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        app:layout_constraintRight_toLeftOf="@+id/seatworks"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/seatworks"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintHorizontal_bias="0.531" />
 
     <EditText
         android:id="@+id/seatworks"
@@ -72,7 +92,10 @@
         android:inputType="number"
         android:layout_below="@id/quiz2"
         android:layout_toRightOf="@id/textView3"
-        android:layout_marginLeft="60dp"/>
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/quiz2"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -81,8 +104,12 @@
         android:text="Lab Exercieses"
         android:textSize="20dp"
         android:layout_below="@id/textView3"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        app:layout_constraintRight_toLeftOf="@+id/labExer"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/labExer"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/labExer"
@@ -91,9 +118,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:layout_marginLeft="20dp"
         android:layout_below="@+id/seatworks"
-        android:layout_toRightOf="@id/textView4"/>
+        android:layout_toRightOf="@id/textView4"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/seatworks"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -102,8 +132,12 @@
         android:text="Major Exams"
         android:textSize="20dp"
         android:layout_below="@id/textView4"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        app:layout_constraintRight_toLeftOf="@+id/majorExams"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/majorExams"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/majorExams"
@@ -114,7 +148,10 @@
         android:inputType="number"
         android:layout_below="@id/labExer"
         android:layout_toRightOf="@id/textView5"
-        android:layout_marginLeft="37dp"/>
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/labExer"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/computeBtn"
@@ -124,5 +161,28 @@
         android:text="Compute"
         android:layout_below="@+id/majorExams"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
-</RelativeLayout>
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/majorExams"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="25dp"
+        android:text="Grade Computation"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

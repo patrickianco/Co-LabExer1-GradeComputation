@@ -1,6 +1,7 @@
 package com.example.labexer1_gradecomputation;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +23,15 @@ public class DisplayActivity extends AppCompatActivity {
         String ra = intent.getStringExtra("finalRA");
         String transmuted = intent.getStringExtra("finalTrans");
 
-        raView.setText("Your RA is: " + ra);
-        transView.setText("Your final grade is: " + transmuted);
+        if(transmuted == "Failed"){
+            transView.setTextColor(Color.parseColor("#f90018"));
+        }
+        else{
+            transView.setTextColor(Color.parseColor("#08ba05"));
+        }
+
+        raView.setText(ra);
+        transView.setText(transmuted);
     }
 
     public void goBack(View view){
