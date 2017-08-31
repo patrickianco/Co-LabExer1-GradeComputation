@@ -8,18 +8,22 @@
 
     <TextView
         android:id="@+id/raView"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:textAlignment="center"
         android:text="TextView"
+        android:textSize="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/transView"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/raView"
+        android:textAlignment="center"
+        android:textSize="20dp"
         android:layout_below="@+id/raView"
         android:layout_marginTop="55dp"
         android:text="TextView" />
@@ -28,8 +32,9 @@
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:onClick="goBack"
-        android:text="Back" />
+        android:text="Back"
+        android:layout_below="@+id/transView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
 </RelativeLayout>
